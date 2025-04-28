@@ -19,7 +19,7 @@ docker build -t ha-smarthub .
 ## Configuration
 
 Edit docker-compose.yml to match your environment:
-  - **electric-usage-downloader:** Configure your settings as explained [here](https://github.com/tedpearson/electric-usage-downloader#config) under config
+  - **electric-usage-downloader:** Configure your settings as explained [here](https://github.com/tedpearson/electric-usage-downloader#config) under config.
   - **mqtt:** Enter your MQTT broker address, username, and password.
   - **ha-smarthub:** Customize MQTT topic names and status messages. Defaults are safe if you're unsure.
   - **advanced:** Fine-tune scraping intervals and retry behavior. Defaults are conservatively set for reliability.
@@ -45,7 +45,14 @@ Alternatively, you can integrate the data into Home Assistant either:
 
 Using Node-RED is recommended for flexibility and easier future adjustments.
 
-you can stop here and just view the data in influxdb graphical interface. you can also integrate the data via rest rather than continuing with node-red. although i think more will be comfortable with node-red since its already a key part of many peoples installs. not to mention its added modularity and ease of chnging course
 
-Limitations: 
+
+
+## Limitations: 
 PEC aggregates usage data in 15-minute intervals, which becomes available the following day. The data, covering the full period from 00:00 to 23:59 of the previous day, is uploaded all at once and typically updated sometime after 06:00. This script is scheduled to run daily at 08:00 to allow sufficient time for data availability and successful scraping.
+
+Home Assistant’s InfluxDB integration is designed primarily for exporting data to the database, not importing from it. As a result, a different method is needed to bring external data into Home Assistant.
+
+Currently, Home Assistant does not support backdating imported data to align with the original timestamps. This means the Energy dashboard will display an entire day's usage as a single block at the time the data is received, rather than spreading it across the day by hour.
+
+Effectively, you will only be able to view daily total usage, not detailed hourly breakdowns. Additionally, because the data is delayed by one day, the usage shown for a given day will actually correspond to the previous day’s consumption.
