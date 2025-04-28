@@ -49,7 +49,7 @@ Using Node-RED is recommended for flexibility and easier future adjustments.
 
 
 ## Limitations: 
-PEC aggregates usage data in 15-minute intervals, which becomes available the following day (your provider may be different). The data, covering the full period from 00:00 to 23:59 of the previous day, is uploaded all at once and typically updated sometime after 06:00. This script is scheduled to run daily at 08:00 to allow sufficient time for data availability and successful scraping.
+PEC aggregates usage data in 15-minute intervals, which becomes available the following day; this could vary depending on your provider. The data, covering the full period from 00:00 to 23:59 of the previous day, is uploaded all at once and typically updated sometime after 06:00. This script is scheduled to run daily at 08:00 to allow sufficient time for data availability and successful scraping.
 
 Home Assistant’s InfluxDB integration is designed primarily for exporting data to the database, not importing from it. As a result, a different method is needed to bring external data into Home Assistant.
 
