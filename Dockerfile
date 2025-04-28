@@ -10,7 +10,6 @@ WORKDIR /app
 
 # Copy files
 COPY run_downloader.py ./run_downloader.py
-COPY config.yaml ./config.yaml
 COPY electric-usage-downloader ./electric-usage-downloader
 
 # Make binary executable
