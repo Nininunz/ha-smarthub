@@ -31,3 +31,6 @@ docker compose -f docker-compose.yml up -d
 ```
 
 you can stop here and just view the data in influxdb graphical interface. you can also integrate the data via rest rather than continuing with node-red. although i think more will be comfortable with node-red since its already a key part of many peoples installs. not to mention its added modularity and ease of chnging course
+
+Limitations: 
+PEC aggregates usage data in 15-minute intervals, which becomes available the following day. The data, covering the full period from 00:00 to 23:59 of the previous day, is uploaded all at once and typically updated sometime after 06:00. This script is scheduled to run daily at 08:00 to allow sufficient time for data availability and successful scraping.
