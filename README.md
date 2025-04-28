@@ -36,7 +36,14 @@ docker compose -f docker-compose.yml up -d
 ```
 
 
+## Data Usage
 
+At this point, you can view the data directly using an InfluxDB graphical interface.
+Alternatively, you can integrate the data into Home Assistant either:
+  - Via REST APIs (for advanced users), or
+  - Through Node-RED, which is more modular and widely used in Home Assistant setups.
+
+Using Node-RED is recommended for flexibility and easier future adjustments.
 
 you can stop here and just view the data in influxdb graphical interface. you can also integrate the data via rest rather than continuing with node-red. although i think more will be comfortable with node-red since its already a key part of many peoples installs. not to mention its added modularity and ease of chnging course
 
