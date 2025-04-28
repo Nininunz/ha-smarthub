@@ -19,10 +19,10 @@ docker build -t ha-smarthub .
 ## Configuration
 
 Edit docker-compose.yml to match your environment:
-  - **electric-usage-downloader section:** Configure your settings as explained [here](https://github.com/tedpearson/electric-usage-downloader#config) under config
-  - **mqtt section:** Enter your MQTT broker address, username, and password.
-  - **ha-smarthub section:** Customize MQTT topic names and status messages. Defaults are safe if you're unsure.
-  - **advanced section:** Fine-tune scraping intervals and retry behavior. Defaults are conservatively set for reliability.
+  - **electric-usage-downloader:** Configure your settings as explained [here](https://github.com/tedpearson/electric-usage-downloader#config) under config
+  - **mqtt:** Enter your MQTT broker address, username, and password.
+  - **ha-smarthub:** Customize MQTT topic names and status messages. Defaults are safe if you're unsure.
+  - **advanced:** Fine-tune scraping intervals and retry behavior. Defaults are conservatively set for reliability.
 
 
 Edit the compose file:
