@@ -13,7 +13,7 @@
 * If message payload is fail → trigger failure handling.
 
 **Build Flux Query (Function Node)**
-* Builds a Flux query dynamically to fetch yesterday's 5:00 AM UTC to today's 5:00 AM UTC data from InfluxDB.
+* Builds a Flux query dynamically to fetch yesterday's adjusted UTC to today's adjusted UTC data from InfluxDB.
 
 **InfluxDB Fail (Home Assistant Service Call Node)**
 * Sends a push notification if a failure is detected before or during querying InfluxDB.
@@ -44,7 +44,7 @@
 **Success (Home Assistant Service Call Node)**
 * Sends a push notification confirming that the daily usage was calculated and uploaded successfully.
 
-**mqtt (MQTT Out Node)**
+**MQTT Out (MQTT Out Node)**
 * Publishes the final daily kWh energy usage to MQTT, allowing Home Assistant (or any subscriber) to receive the data.
 
 **Debug (Debug Node)**
