@@ -1,5 +1,5 @@
 # ha-smarthub
-Imports SmartHub usage dumps into InfluxDB and integrates into HomeAssistant
+Imports SmartHub usage dumps into InfluxDB and integrates into HomeAssistant for energy usage monitoring.
 
 ## Build Instructions
 Clone the repository
