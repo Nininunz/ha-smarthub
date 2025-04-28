@@ -9,14 +9,14 @@
  * Listens for MQTT messages on the topic downloader/status to automatically trigger the flow.
 
 **Fail/Success Split (Switch Node)**
-Splits incoming messages:
+  * Splits incoming messages:
 
-If message payload is success → continue the process.
+  * If message payload is success → continue the process.
 
-If message payload is fail → trigger failure handling.
+  * If message payload is fail → trigger failure handling.
 
 **Build Flux Query (Function Node)**
-Builds a Flux query dynamically to fetch yesterday's 5:00 AM UTC to today's 5:00 AM UTC data from InfluxDB.
+  * Builds a Flux query dynamically to fetch yesterday's 5:00 AM UTC to today's 5:00 AM UTC data from InfluxDB.
 
 **InfluxDB Fail (Home Assistant Service Call Node)**
 Sends a push notification if a failure is detected before or during querying InfluxDB.
