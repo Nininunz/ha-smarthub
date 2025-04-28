@@ -56,4 +56,4 @@ Home Assistant’s InfluxDB integration is designed primarily for exporting data
 
 ## Credits:
 
-Portions of this project rely on [electric-usage-downloader](https://github.com/tedpearson/electric-usage-downloader) by [@tedpearson](https://github.com/tedpearson), which reverse engineers the SmartHub API and provides energy usage extraction and formatting functionality. Full configuration instructions for the downloader can be found here.
+Portions of this project rely on [electric-usage-downloader](https://github.com/tedpearson/electric-usage-downloader) by [@tedpearson](https://github.com/tedpearson), which reverse engineers the SmartHub API and provides energy usage extraction and formatting functionality. Full configuration instructions for the downloader can be found [here](https://github.com/tedpearson/electric-usage-downloader#Config).
