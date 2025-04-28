@@ -26,3 +26,5 @@ git clone https://github.com/Nininunz/ha-smarthub.git/
 ```
 docker build -t ha-smarthub .
 ```
+
+Edit compose file with your shit
