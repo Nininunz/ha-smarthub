@@ -22,3 +22,6 @@ docker build -t ha-smarthub .
 ```
 
 Edit compose file with your shit
+```
+nano docker-compose-yaml
+```
