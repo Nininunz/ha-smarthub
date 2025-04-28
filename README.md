@@ -25,15 +25,18 @@ Edit docker-compose.yml to match your environment:
   - **advanced section:** Fine-tune scraping intervals and retry behavior. Defaults are conservatively set for reliability.
 
 
-
+Edit the compose file:
 ```
 nano docker-compose.yaml
 ```
 
-Create and run container
+Create and start the container:
 ```
 docker compose -f docker-compose.yml up -d
 ```
+
+
+
 
 you can stop here and just view the data in influxdb graphical interface. you can also integrate the data via rest rather than continuing with node-red. although i think more will be comfortable with node-red since its already a key part of many peoples installs. not to mention its added modularity and ease of chnging course
 
