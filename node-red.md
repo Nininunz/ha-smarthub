@@ -37,11 +37,11 @@
 **Strip (_start) & (_stop) (Function Node)** [Example](https://github.com/Nininunz/ha-smarthub/blob/main/examples/strip_metadata.js)
 * Removes unnecessary metadata fields (_start, _stop) from the InfluxDB response to simplify the dataset.
 
-**Sum Daily Energy Usage (Function Node)**
+**Sum Daily Energy Usage (Function Node)** [Example](https://github.com/Nininunz/ha-smarthub/blob/main/examples/daily_sum.js)
 * Sums all 15-minute interval watt readings.
 * Converts the total into daily kWh usage.
 
-**MQTT Publish (Function Node)**
+**MQTT Publish (Function Node)** [Example](https://github.com/Nininunz/ha-smarthub/blob/main/examples/mqtt_publish.js)
 * Prepares the payload and topic to publish the daily energy usage back over MQTT (for Home Assistant sensors).
 
 **Success (Home Assistant Service Call Node)**
