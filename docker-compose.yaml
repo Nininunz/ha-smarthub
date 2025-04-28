@@ -22,7 +22,7 @@ services:
       - MQTT_USERNAME=mqttuser
       - MQTT_PASSWORD=secret
     #### ha-smarthub ####
-        - MQTT_TOPIC=downloader/status
+      - MQTT_TOPIC=downloader/status
       - MQTT_SUCCESS_MESSAGE=success
       - MQTT_FAIL_MESSAGE=fail
       
