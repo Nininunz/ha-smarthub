@@ -3,7 +3,8 @@ services:
     image: ha-smarthub:latest
     container_name: ha-smarthub
     environment:
-      - EXTRACT_DAYS=10
+    #### electric-usage-downloader ####
+      - EXTRACT_DAYS=10 #Can be left default
       - SMARTHUB_API_URL=https://api.smarthub.coop
       - SMARTHUB_USERNAME=myusername
       - SMARTHUB_PASSWORD=mypassword
@@ -13,20 +14,24 @@ services:
       - INFLUXDB_HOST=influxdb.local
       - INFLUXDB_AUTH_TOKEN=mytoken
       - INFLUXDB_ORG=myorg
-      - INFLUXDB_DATABASE=power_meter
-      - INFLUXDB_INSECURE=false
+      - INFLUXDB_DATABASE=power_meter #Can be left default
+      - INFLUXDB_INSECURE=false #Can be left default
+    #### ha-smarthub ####
       - MQTT_BROKER=mqtt.local
       - MQTT_PORT=1883
       - MQTT_USERNAME=mqttuser
       - MQTT_PASSWORD=secret
+
+      
+    #### Do Not Touch ###
       - MQTT_TOPIC=downloader/status
       - MQTT_SUCCESS_MESSAGE=success
       - MQTT_FAIL_MESSAGE=fail
-      - START_HOUR=8
-      - START_MINUTE=0
-      - CUTOFF_HOUR=20
-      - ALERT_HOUR=12
-      - RETRY_ATTEMPTS=5
+      - START_HOUR=8 
+      - START_MINUTE=0 
+      - CUTOFF_HOUR=20 
+      - ALERT_HOUR=12 
+      - RETRY_ATTEMPTS=5 
       - INITIAL_BACKOFF_SECONDS=5
       - MAX_BACKOFF_SECONDS=300
       - JITTER_PERCENT=0.1
@@ -36,3 +41,4 @@ services:
 
 
     
+
