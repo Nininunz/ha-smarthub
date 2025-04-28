@@ -2,7 +2,7 @@
 
 ## Node-RED Flow Example
 
-* **Manual Trigger (Inject Node)**
+**Manual Trigger (Inject Node)**
   * Lets you manually start the flow anytime for testing.
 
 **Downloader/Status (MQTT In Node)**
