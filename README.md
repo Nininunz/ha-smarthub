@@ -1,5 +1,5 @@
 # ha-smarthub
-Import SmartHub usage dumps into InfluxDB and integrate into HomeAssistant
+Imports SmartHub usage dumps into InfluxDB and integrates into HomeAssistant
 
 ## Build Instructions
 Clone the repository
