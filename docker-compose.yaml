@@ -16,17 +16,17 @@ services:
       - INFLUXDB_ORG=myorg
       - INFLUXDB_DATABASE=power_meter #Can be left default
       - INFLUXDB_INSECURE=false #Can be left default
-    #### ha-smarthub ####
+    #### mqtt host ####
       - MQTT_BROKER=mqtt.local
       - MQTT_PORT=1883
       - MQTT_USERNAME=mqttuser
       - MQTT_PASSWORD=secret
-
-      
-    #### Do Not Touch ###
-      - MQTT_TOPIC=downloader/status
+    #### ha-smarthub ####
+        - MQTT_TOPIC=downloader/status
       - MQTT_SUCCESS_MESSAGE=success
       - MQTT_FAIL_MESSAGE=fail
+      
+    #### Do Not Touch ###
       - START_HOUR=8 
       - START_MINUTE=0 
       - CUTOFF_HOUR=20 
