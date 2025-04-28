@@ -1,20 +1,22 @@
 # ha-smarthub
 Import SmartHub usage dumps into InfluxDB and integrate into HomeAssistant
 
-Build:
+# Build Instructions
+Clone the repository
 ```
 git clone https://github.com/Nininunz/ha-smarthub.git/
 ```
 ```
 cd ha-smarthub
 ```
-
-Build image
+Build the Docker image:
 ```
 docker build -t ha-smarthub .
 ```
 
-Edit docker-compose.yaml with your variables:
+# Configuration
+
+Edit docker-compose.yml to match your environment:
 
   For electric-usage-downloader section: better explained [here](https://github.com/tedpearson/electric-usage-downloader#config) under config
   For mqtt section: enter your mqtt host credentials
