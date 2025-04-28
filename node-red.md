@@ -15,10 +15,8 @@
 * If message payload is success → continue the process.
 * If message payload is fail → trigger failure handling.
 
-**Build Flux Query (Function Node)**
+**Build Flux Query (Function Node)** [Example](https://github.com/Nininunz/ha-smarthub/blob/main/examples/build_query.js)
 * Builds a Flux query dynamically to fetch yesterday's adjusted UTC to today's adjusted UTC data from InfluxDB.
-<br />
-[Example](https://github.com/Nininunz/ha-smarthub/blob/main/examples/build_query.js)
 
 **InfluxDB Fail (Home Assistant Service Call Node)**
 * Sends a push notification if a failure is detected before or during querying InfluxDB.
