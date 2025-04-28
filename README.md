@@ -2,7 +2,7 @@
 Imports SmartHub usage dumps into InfluxDB and integrates into HomeAssistant for energy usage monitoring.
 
 ## Build Instructions
-Clone the repository
+Clone the repository:
 ```
 git clone https://github.com/Nininunz/ha-smarthub.git/
 ```
