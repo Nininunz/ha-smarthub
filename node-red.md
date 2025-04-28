@@ -2,8 +2,6 @@
 
 ## Node-RED Flow Example
 <img width="908" alt="Screenshot 2025-04-28 at 3 04 35 PM" src="https://github.com/user-attachments/assets/e63de26b-a10d-4a42-98b7-bb0531fac7de" />
-<br />
-<br />
 
 **Manual Trigger (Inject Node)**
 * Lets you manually start the flow anytime for testing.
