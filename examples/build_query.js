@@ -25,7 +25,7 @@ msg.payload = `
 option startTime = time(v: "${startISO}")
 option endTime = time(v: "${endISO}")
 
-from(bucket: "pec_meter")
+from(bucket: "power_meter")
   |> range(start: -7d)
   |> filter(fn: (r) => r._measurement == "electric" and r._field == "watts")
   |> filter(fn: (r) => r._time >= startTime and r._time < endTime)
