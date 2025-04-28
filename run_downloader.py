@@ -6,6 +6,46 @@ import argparse
 import random
 from datetime import datetime, timedelta
 import paho.mqtt.publish as publish
+import yaml 
+
+# === Helper to generate config.yaml ===
+import yaml
+import hashlib
+import os
+
+def generate_config_yaml():
+    config = {
+        "extract_days": EXTRACT_DAYS,
+        "smarthub": {
+            "api_url": SMARTHUB_API_URL,
+            "username": SMARTHUB_USERNAME,
+            "password": SMARTHUB_PASSWORD,
+            "account": SMARTHUB_ACCOUNT,
+            "service_location": SMARTHUB_SERVICE_LOCATION,
+            "timezone": SMARTHUB_TIMEZONE
+        },
+        "influxdb": {
+            "host": INFLUXDB_HOST,
+            "auth_token": INFLUXDB_AUTH_TOKEN,
+            "org": INFLUXDB_ORG,
+            "database": INFLUXDB_DATABASE,
+            "insecure": INFLUXDB_INSECURE
+        }
+    }
+
+    new_yaml = yaml.dump(config, default_flow_style=False)
+
+    existing_yaml = None
+    if os.path.exists("config.yaml"):
+        with open("config.yaml", "r") as f:
+            existing_yaml = f.read()
+
+    if existing_yaml != new_yaml:
+        with open("config.yaml", "w") as f:
+            f.write(new_yaml)
+        logging.info("Generated/updated config.yaml from environment variables")
+    else:
+        logging.info("config.yaml unchanged (no regeneration needed)")
 
 # === Helper to get env vars ===
 def get_env(key, default, cast_func=str):
