@@ -43,7 +43,7 @@ Alternatively, you can integrate the data into Home Assistant either:
   - Via REST APIs (for advanced users), or
   - Through Node-RED, which is more modular and widely used in Home Assistant setups.
 
-Using Node-RED is recommended for flexibility and easier future adjustments. Example flow [here]([https://github.com/Nininunz/ha-smarthub/edit/main/node-red.md](https://github.com/Nininunz/ha-smarthub/blob/main/node-red.md)
+Using Node-RED is recommended for flexibility and easier future adjustments. Example flow [here](https://github.com/Nininunz/ha-smarthub/blob/main/node-red.md).
 
 
 
