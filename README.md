@@ -17,8 +17,10 @@ docker build -t ha-smarthub .
 Edit docker-compose.yaml with your variables:
 
   For electric-usage-downloader section: better explained [here](https://github.com/tedpearson/electric-usage-downloader#config) under config
-  For ha-smarthub section, it's pretty self explanatory. Just enter your mqtt host credentials.
+  For mqtt section: enter your mqtt host credentials
+  For ha-smarthub section: use this to customize status messages and topic within mqtt, best left default if you dont know what it does
 
+  advanced section is for fine tuning of intervals and retries. Defaults are set conservatively. 
 ```
 nano docker-compose.yaml
 ```
