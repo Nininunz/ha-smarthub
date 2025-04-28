@@ -18,7 +18,7 @@
 **Build Flux Query (Function Node)**
 * Builds a Flux query dynamically to fetch yesterday's adjusted UTC to today's adjusted UTC data from InfluxDB.
 <br />
-[Example]()
+[Example](https://github.com/Nininunz/ha-smarthub/blob/main/examples/build_query.js)
 
 **InfluxDB Fail (Home Assistant Service Call Node)**
 * Sends a push notification if a failure is detected before or during querying InfluxDB.
