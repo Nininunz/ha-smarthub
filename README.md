@@ -19,6 +19,7 @@ If having issues use version 2.3.2
 ```
 curl -L -o electric-usage-downloader https://github.com/tedpearson/electric-usage-downloader/releases/download/v2.3.2/electric-usage-downloader-linux-amd64
 ```
+```
 git clone https://github.com/Nininunz/ha-smarthub.git/
 ```
 
