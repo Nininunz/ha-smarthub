@@ -16,7 +16,9 @@ docker build -t ha-smarthub .
 
 Edit compose file with your shit
 better explained here https://github.com/tedpearson/electric-usage-downloader#Config
+
 EXTRACT_DAYS=10 # number of days to retrieve data
+
 SMARTHUB_API_URL=https://api.smarthub.coop # provider specific url for smarthub portal
 SMARTHUB_USERNAME=myusername # username used to sign into smarthub portal
 SMARTHUB_PASSWORD=mypassword # password used to sign into smarthub portal
