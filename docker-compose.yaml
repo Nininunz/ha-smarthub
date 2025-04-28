@@ -1,0 +1,38 @@
+services:
+  ha-smarthub:
+    image: ha-smarthub:latest
+    container_name: ha-smarthub
+    environment:
+      - EXTRACT_DAYS=10
+      - SMARTHUB_API_URL=https://api.smarthub.coop
+      - SMARTHUB_USERNAME=myusername
+      - SMARTHUB_PASSWORD=mypassword
+      - SMARTHUB_ACCOUNT=123456
+      - SMARTHUB_SERVICE_LOCATION=12345678
+      - SMARTHUB_TIMEZONE=America/Chicago
+      - INFLUXDB_HOST=influxdb.local
+      - INFLUXDB_AUTH_TOKEN=mytoken
+      - INFLUXDB_ORG=myorg
+      - INFLUXDB_DATABASE=pec_meter
+      - INFLUXDB_INSECURE=false
+      - MQTT_BROKER=mqtt.local
+      - MQTT_PORT=1883
+      - MQTT_USERNAME=mqttuser
+      - MQTT_PASSWORD=secret
+      - MQTT_TOPIC=downloader/status
+      - MQTT_SUCCESS_MESSAGE=success
+      - MQTT_FAIL_MESSAGE=fail
+      - START_HOUR=8
+      - START_MINUTE=0
+      - CUTOFF_HOUR=20
+      - ALERT_HOUR=12
+      - RETRY_ATTEMPTS=5
+      - INITIAL_BACKOFF_SECONDS=5
+      - MAX_BACKOFF_SECONDS=300
+      - JITTER_PERCENT=0.1
+      - CYCLE_DELAY_MINUTES=15
+    restart: unless-stopped
+    command: ["python", "run_downloader.py"] 
+
+
+    
