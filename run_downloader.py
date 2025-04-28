@@ -1,3 +1,4 @@
+import os
 import subprocess
 import logging
 import time
@@ -6,26 +7,35 @@ import random
 from datetime import datetime, timedelta
 import paho.mqtt.publish as publish
 
-# === Schedule & Retry Configuration ===
-START_HOUR = 8
-START_MINUTE = 0
-CUTOFF_HOUR = 20
-ALERT_HOUR = 12
+# === Helper to get env vars ===
+def get_env(key, default, cast_func=str):
+    value = os.getenv(key)
+    if value is not None:
+        try:
+            return cast_func(value)
+        except ValueError:
+            pass
+    return default
 
-RETRY_ATTEMPTS = 5
-INITIAL_BACKOFF_SECONDS = 5
-MAX_BACKOFF_SECONDS = 300  # Max 5 minutes
-JITTER_PERCENT = 0.1       # ±10% jitter
-CYCLE_DELAY_MINUTES = 15
+# === Configuration (with environment overrides) ===
+START_HOUR = get_env("START_HOUR", 8, int)
+START_MINUTE = get_env("START_MINUTE", 0, int)
+CUTOFF_HOUR = get_env("CUTOFF_HOUR", 20, int)
+ALERT_HOUR = get_env("ALERT_HOUR", 12, int)
 
-# === MQTT Configuration ===
-MQTT_BROKER = "CHANGE_ME" 
-MQTT_PORT = 1883 
-MQTT_USERNAME = "CHANGE_ME" 
-MQTT_PASSWORD = "CHANGE_ME"
-MQTT_TOPIC = "downloader/status"
-MQTT_SUCCESS_MESSAGE = "success"
-MQTT_FAIL_MESSAGE = "fail"
+RETRY_ATTEMPTS = get_env("RETRY_ATTEMPTS", 5, int)
+INITIAL_BACKOFF_SECONDS = get_env("INITIAL_BACKOFF_SECONDS", 5, int)
+MAX_BACKOFF_SECONDS = get_env("MAX_BACKOFF_SECONDS", 300, int)
+JITTER_PERCENT = get_env("JITTER_PERCENT", 0.1, float)
+CYCLE_DELAY_MINUTES = get_env("CYCLE_DELAY_MINUTES", 15, int)
+
+MQTT_BROKER = get_env("MQTT_BROKER", "CHANGE_ME")
+MQTT_PORT = get_env("MQTT_PORT", 1883, int)
+MQTT_USERNAME = get_env("MQTT_USERNAME", "CHANGE_ME")
+MQTT_PASSWORD = get_env("MQTT_PASSWORD", "CHANGE_ME")
+MQTT_TOPIC = get_env("MQTT_TOPIC", "downloader/status")
+MQTT_SUCCESS_MESSAGE = get_env("MQTT_SUCCESS_MESSAGE", "success")
+MQTT_FAIL_MESSAGE = get_env("MQTT_FAIL_MESSAGE", "fail")
 
 # === Logging Setup ===
 logging.basicConfig(
