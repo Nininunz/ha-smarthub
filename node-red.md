@@ -24,7 +24,7 @@
 **Send to InfluxDB (HTTP Request Node)**
 * Executes the Flux query against InfluxDB to retrieve the raw 15-minute interval data.
 
-**Adjust Local Time (Function Node)**
+**Adjust Local Time (Function Node)** [Example](https://github.com/Nininunz/ha-smarthub/blob/main/examples/adjust_time.js)
 * Adjusts timestamps from UTC to local time.
 
 * Checks if the data is populated for the expected window.
