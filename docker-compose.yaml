@@ -26,7 +26,7 @@ services:
       - MQTT_SUCCESS_MESSAGE=success
       - MQTT_FAIL_MESSAGE=fail
       
-    #### Do Not Touch ###
+    #### advanced ###
       - START_HOUR=8 
       - START_MINUTE=0 
       - CUTOFF_HOUR=20 
