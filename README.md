@@ -15,6 +15,7 @@ docker build -t ha-smarthub .
 ```
 
 Edit docker-compose.yaml with your variables:
+
   For electric-usage-downloader section: better explained [here](https://github.com/tedpearson/electric-usage-downloader#config) under config
   For ha-smarthub section, it's pretty self explanatory. Just enter your mqtt host credentials.
 
