@@ -16,7 +16,7 @@ services:
       - INFLUXDB_ORG=myorg
       - INFLUXDB_DATABASE=power_meter #Can be left default
       - INFLUXDB_INSECURE=false #Can be left default
-    #### mqtt host ####
+    #### mqtt ####
       - MQTT_BROKER=mqtt.local
       - MQTT_PORT=1883
       - MQTT_USERNAME=mqttuser
