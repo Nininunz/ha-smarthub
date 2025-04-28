@@ -3,8 +3,10 @@ Import SmartHub usage dumps into InfluxDB and integrate into HomeAssistant
 
 Build:
 
+```
 mkdir ha-smarthub
 cd ha-smarthub
+```
 
 Download electric-usage-downloader (current latest 2.3.2, future updates may break this script)
 
