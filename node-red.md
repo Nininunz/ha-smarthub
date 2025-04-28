@@ -8,9 +8,8 @@
 **Downloader/Status (MQTT In Node)**
  * Listens for MQTT messages on the topic downloader/status to automatically trigger the flow.
 
-**Fail/Success Split (Switch Node)**\
-\
-Splits incoming messages:
+**Fail/Success Split (Switch Node)**\ 
+ Splits incoming messages:
 
   * If message payload is success → continue the process.
 
