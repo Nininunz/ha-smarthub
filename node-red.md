@@ -34,7 +34,7 @@
 **Yesterday Fail (Home Assistant Service Call Node)**
 * Sends a push notification that no usable data was found for yesterday.
 
-**Strip (_start) & (_stop) (Function Node)**
+**Strip (_start) & (_stop) (Function Node)** [Example](https://github.com/Nininunz/ha-smarthub/blob/main/examples/strip_metadata.js)
 * Removes unnecessary metadata fields (_start, _stop) from the InfluxDB response to simplify the dataset.
 
 **Sum Daily Energy Usage (Function Node)**
