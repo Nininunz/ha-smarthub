@@ -14,9 +14,9 @@ Build image
 docker build -t ha-smarthub .
 ```
 
-Edit compose file with your shit
-for electric-usage-downloader, better explained here under config https://github.com/tedpearson/electric-usage-downloader#config
-for ha-smarthub section it's pretty self explanatory. enter your mqtt host credentials 
+Edit docker-compose.yaml with your variables:
+  For electric-usage-downloader section: better explained [here](https://github.com/tedpearson/electric-usage-downloader#config) under config
+  For ha-smarthub section, it's pretty self explanatory. Just enter your mqtt host credentials.
 
 ```
 nano docker-compose.yaml
