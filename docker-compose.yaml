@@ -13,7 +13,7 @@ services:
       - INFLUXDB_HOST=influxdb.local
       - INFLUXDB_AUTH_TOKEN=mytoken
       - INFLUXDB_ORG=myorg
-      - INFLUXDB_DATABASE=pec_meter
+      - INFLUXDB_DATABASE=power_meter
       - INFLUXDB_INSECURE=false
       - MQTT_BROKER=mqtt.local
       - MQTT_PORT=1883
